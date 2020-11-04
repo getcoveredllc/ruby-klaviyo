@@ -22,10 +22,10 @@ module Klaviyo
       check_private_api_key_exists()
       url = "#{BASE_API_URL}/#{path}"
       connection = Faraday.new(
-        url: url,
-        headers: {
-          'Content-Type' => 'application/json'
-      })
+          url: url,
+          headers: {
+              'Content-Type' => 'application/json'
+          })
       response = connection.send(method) do |req|
         req.body = kwargs[:body].to_json || nil
       end
@@ -52,7 +52,7 @@ module Klaviyo
     def self.v2_request(method, path, kwargs = {})
       path = "#{V2_API}/#{path}"
       key = {
-        "api_key": "#{Klaviyo.private_api_key}"
+          "api_key": "#{Klaviyo.private_api_key}"
       }
       data = {}
       data[:body] = key.merge(kwargs)

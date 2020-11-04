@@ -15,4 +15,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'rack'
   s.add_dependency 'escape'
   s.add_dependency 'faraday'
+  s.add_dependency 'rest-client', '>= 1.8'
 end
