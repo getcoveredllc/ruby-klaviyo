@@ -86,7 +86,6 @@ module Klaviyo
     def self.encode_params(kwargs)
       kwargs.select!{|k, v| v}
       params = URI.encode_www_form(kwargs)
-
       if !params.empty?
         return "&#{params}"
       end
