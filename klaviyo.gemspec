@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.files       = files
   s.homepage = 'https://www.klaviyo.com/'
   s.require_path = 'lib'
-  s.required_ruby_version = '~> 3.0.1'
+  s.required_ruby_version = '>= 3.0.1'
 
   s.add_dependency 'json', '~> 2.1'
   s.add_dependency 'rack', '~> 2.0'
